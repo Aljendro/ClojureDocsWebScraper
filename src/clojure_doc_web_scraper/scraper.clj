@@ -37,8 +37,9 @@
   "Extracts function arg lists and docstrings,
   returns a map for each function"
   [args docstring]
-  {:args (map (comp first :content) args)
-   :docstring ((comp first :content first) docstring)})
+  (let [arg-list (map (comp first :content) args)
+        docs ((comp first :content first) docstring)]
+    {:args arg-list :docstring docs}))
 
 (defn find-function-info
   "Takes the function page DOM and returns a map 
@@ -53,7 +54,7 @@
   [func-url]
   ;; Slow down the requests, so that we don't
   ;; get banned from the site
-  (Thread/sleep 5000)
+  (Thread/sleep 1000)
   (-> (get-dom (str defaults/clojure-docs-url func-url))
       (find-function-info)))
 
