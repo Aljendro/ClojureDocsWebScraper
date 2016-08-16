@@ -1,36 +1,20 @@
 # clojure-doc-web-scraper
 
-FIXME: description
+ClojureDocWebScraper is intended to be used to scrape the Clojuredocs website.
+The focus of this script was to scrape the functions, their definitions, and
+the usage of the functions. All this information would then be saved to
+an out-file.
 
-## Installation
+# Usage
+This program was intended to run as a script. After downloading the source
+from github.
 
-Download from http://example.com/FIXME.
+     cd ClojureDocsWebScraper
+     lein repl
 
-## Usage
+Once the REPL prompt appears you can run:
 
-FIXME: explanation
-
-    $ java -jar clojure-doc-web-scraper-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2016 FIXME
+     (-main [path/to/text/file/on/disk])
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

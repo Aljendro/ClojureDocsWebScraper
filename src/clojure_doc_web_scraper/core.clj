@@ -6,7 +6,7 @@
   (:gen-class))
 
 (defn format-output
-  "Formats the each function for output"
+  "Formats each function for output"
   [func]
   (println func)
   (let [name      (:name func)
