@@ -16,7 +16,7 @@ from github.
 Once the REPL prompt appears you can run:
 
      ;; Will run for about 700s, purposedly slow to avoid taxing ClojureDocs site
-     (-main [path/to/out/file/on/disk])    ;; Will append function info to file
+     (-main "./outFile.txt")    ;; Will append function info to file
 
 # How to use the out-file
 
@@ -25,6 +25,6 @@ I have also written a python script located in my Anki fork, which reads the
 file created and creates a flashcard for each function.
 
      # After downloading my repo
-     python3 [/path/to/exporting_to_file.py] [/path/to/out/file] [/path/to/.apkg/file] 
+     python3 "/path/to/exporting_to_file.py" "/path/to/out/file" "/path/to/.apkg/file"
 
 Distributed under the Eclipse Public License either version 1.0
